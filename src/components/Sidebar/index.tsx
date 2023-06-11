@@ -28,7 +28,7 @@ const Sidebar: React.FC = () => {
   });
 
   return (
-    <aside className="bg-white w-52 h-full">
+    <aside id="sidebar" className="bg-white w-52 h-full">
 
       {/* LOGO */}
       <div className="h-20 flex items-center justify-center">

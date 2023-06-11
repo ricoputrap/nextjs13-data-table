@@ -3,7 +3,7 @@ import React from 'react'
 
 const Navbar: React.FC = () => {
   return (
-    <div className="h-20 w-full p-5 bg-white">
+    <div id="navbar" className="h-20 w-full p-5 bg-white">
       <div className="flex justify-end">
         <div className="flex items-center gap-2">
           <Image
