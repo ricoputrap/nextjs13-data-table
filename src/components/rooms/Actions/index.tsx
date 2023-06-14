@@ -5,7 +5,7 @@ import Button from '@/components/Button'
 import React, { useTransition } from 'react'
 
 const Actions: React.FC = () => {
-  const [pending, startTransition] = useTransition();
+  const [isPending, startTransition] = useTransition();
   const handleExport = () => startTransition(() => exportData());
   const handleImport = () => startTransition(() => importData());
 
