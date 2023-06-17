@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Building {
+  id Int @id @default(autoincrement())
+  name String @unique
+  floors Floor[]
+}
+
+model Floor {
+  id Int @id @default(autoincrement())
+  name String
+  order Int
+  building Building @relation(fields: [buildingId], references: [id])
+  buildingId Int
+  rooms Room[]
+}
+
+model Room {
+  id Int @id @default(autoincrement())
+  name String
+  floor Floor @relation(fields: [floorId], references: [id])
+  floorId Int
+}

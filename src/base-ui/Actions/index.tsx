@@ -1,7 +1,7 @@
 "use client";
 
 import { exportData, importData } from '@/app/actions';
-import Button from '@/components/Button'
+import Button from '@/components/reusables/Button'
 import React, { useTransition } from 'react'
 
 const Actions: React.FC = () => {

@@ -1,12 +1,13 @@
-import Actions from "@/components/rooms/Actions";
+import List from "@/components/reusables/List";
 import MainLayout from "@/layout/MainLayout";
+import { TRoomItem } from "@/store";
+import { getRooms } from "./actions";
 
-export default function Home() {
+export default async function Home() {
+  const rooms: TRoomItem[] = await getRooms();
   return (
     <MainLayout title="Rooms">
-      <div className="bg-white rounded-md p-5 mt-5">
-        <Actions />
-      </div>
+      <List items={ rooms } />
     </MainLayout>
   )
 }

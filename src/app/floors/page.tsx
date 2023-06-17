@@ -1,10 +1,14 @@
-import HugeList from "@/components/floors/HugeList";
+import List from "@/components/reusables/List";
 import MainLayout from "@/layout/MainLayout";
+import { TFloorItem } from "@/store";
+import { getFloors } from "../actions";
 
-export default function Floors() {
+export default async function Floors() {
+  const floors: TFloorItem[] = await getFloors();
+
   return (
     <MainLayout title="Floors">
-      <HugeList />
+      <List items={ floors } />
     </MainLayout>
   )
 }
