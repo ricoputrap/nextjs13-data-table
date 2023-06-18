@@ -1,4 +1,4 @@
-import BuildingList from "@/components/buildings/BuildingList";
+import BuildingTable from "@/components/buildings/BuildingTable";
 import MainLayout from "@/layout/MainLayout";
 import { getBuildings } from "../actions";
 
@@ -7,7 +7,7 @@ export default async function Buildings() {
 
   return (
     <MainLayout title="Buildings">
-      <BuildingList items={ buildings } />
+      <BuildingTable buildings={ buildings } />
     </MainLayout>
   )
 }
